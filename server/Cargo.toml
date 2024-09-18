@@ -1,0 +1,18 @@
+[package]
+name = "ai-caddie-backend"
+version = "0.1.0"
+edition = "2021"
+
+[target.aarch64-apple-darwin]
+rustflags = ["-L", "/opt/homebrew/opt/libpq/lib"]
+
+[dependencies]
+actix-web = "4.0"
+diesel = { version = "2.0", features = ["postgres", "r2d2"] }
+dotenv = "0.15"
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1.0", features = ["full"] }
+serde_json = "1.0.127"
+svg = "0.10.0"
+actix-cors = "0.7.0"
+log = "0.4.22"
